@@ -1,0 +1,5 @@
+<zimletConfig name="zimbra-zimlet-rocketchat" version="0.0.1">
+    <global>
+        <property name="rocketurl">https://rocketchat.barrydegraaff.tk/</property>
+    </global>
+</zimletConfig>
