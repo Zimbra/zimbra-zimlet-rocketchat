@@ -12,7 +12,7 @@ export default function Zimlet(context) {
 	exports.init = function init() {
 		// The zimlet slots to load into, and what is being loaded into that slot
 		// (CustomMenuItem and Router are both defined below)
-		plugins.register("slot::cloudapps-tab-item", CustomMenuItem);
+		plugins.register("slot::chatapps-tab-item", CustomTabItemInner);
 
 		// Only needed if you need to create a new url route, like for a menu tab, or print, etc
 		plugins.register("slot::routes", Router);
@@ -20,18 +20,21 @@ export default function Zimlet(context) {
 
 	// Register a new route with the preact-router instance
 	function Router() {
-		return [<App path={`/cloudapps/rocketchat`} context={context}></App>];
+		return [<App path={`/chatapps/rocketchat`} context={context}></App>];
 	}
 
-	// Create a main nav menu item.
-	// withIntl should be used on every component registered via plugins.register(). You will see this in the App index.js file as well
-	const CustomMenuItem = withIntl()(() => (
-		// List of components can be found in zm-x-web, zimlet-manager/shims.js, and more can be added if needed
-		<MenuItem responsive href={`/cloudapps/rocketchat`}>
-			<span className="zimbra-icon-rocketchat"></span>
-			<b>Rocket Chat</b>
-		</MenuItem>
-	));
+		// Create a main nav menu item.
+		const CustomTabItemInner = () => {
+			const childIcon = (
+				<span class="zimbra-icon-rocketchat">
+				</span>);
+			return (
+				<MenuItem icon={childIcon} responsive href={`/chatapps/rocketchat`}>
+					Rocket Chat
+				</MenuItem>
+			);
+		};
+
 
 	//create user account on rocket chat side
 	try {

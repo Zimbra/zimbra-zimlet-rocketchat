@@ -1,0 +1,4 @@
+<zimlet name="zimbra-zimlet-rocketchat" version="0.0.1" description="Rocket Chat" label="Rocket Chat" zimbraXZimletCompatibleSemVer=">=2.0.0">
+	<include>index.js</include>
+	<resource>index.js.map</resource>
+</zimlet>
