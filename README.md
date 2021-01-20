@@ -22,8 +22,11 @@ This will allow you to use TLS/SSL and configure headers needed for the integrat
 
    apt install nginx
    systemctl enable nginx   
-   # apply the config in /etc/nginx/sites-enabled/default 
+
+Modify the config in `/etc/nginx/sites-enabled/default` as per the example in proxy-config folder.
+
    systemctl start nginx
+
 
 ## Setting up Zimbra
 For this you need to set-up the Java server extension copy it from https://github.com/Zimbra-Community/zimbra-rocket/releases to /opt/zimbra/lib/ext/rocket/rocket.jar ( and make sure this is the only jar in this folder) then create a text file /opt/zimbra/lib/ext/rocket/config.properties with the contents:
