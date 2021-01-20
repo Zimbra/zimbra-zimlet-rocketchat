@@ -20,12 +20,12 @@ Follow the instruction for setting up Rocket Chat using Snap on Ubuntu 18.
 
 This will allow you to use TLS/SSL and configure headers needed for the integration. See the proxy-config folder for a basic example nginx/apache config.
 
-   apt install nginx
-   systemctl enable nginx   
+      apt install nginx
+      systemctl enable nginx   
 
 Modify the config in `/etc/nginx/sites-enabled/default` as per the example in proxy-config folder.
 
-   systemctl start nginx
+      systemctl start nginx
 
 
 ## Setting up Zimbra
