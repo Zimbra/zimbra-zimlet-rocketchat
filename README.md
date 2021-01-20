@@ -7,21 +7,23 @@ This Zimlet will automatically create accounts for your users and will log them 
 
 ## How to install Rocket Chat
 
-On this github we will not cover the installation of Rocket Chat, as it's perfectly explained here:
-* https://rocket.chat/docs/installation/minimum-requirements
-* https://www.digitalocean.com/community/tutorials/how-to-install-configure-and-deploy-rocket-chat-on-ubuntu-14-04
-* https://www.howtoforge.com/tutorial/how-to-install-rocket-chat-with-nginx-on-ubuntu-16-04/
+Follow the instruction for setting up Rocket Chat using Snap on Ubuntu 18. 
 
-## Check permissions in Rocket Chat IMPORTANT!
-As of Rocket Chat version 2.1.0 you must set the CREATE_TOKENS_FOR_USERS environment variable for this integration to work. If you use snaps:
+- https://docs.rocket.chat/installation/snaps
+
+## Allow API tokens to be used
 
     echo "CREATE_TOKENS_FOR_USERS=true" > /var/snap/rocketchat-server/common/create-tokens.env
     sudo systemctl restart snap.rocketchat-server.rocketchat-server.service
-        
-Rocket Chat is designed to be deployed on Docker or Ubuntu Snap, which is really great:
-* https://rocket.chat/docs/installation/docker-containers/
-* https://rocket.chat/docs/installation/manual-installation/ubuntu/snaps/
 
+## Set up a reverse proxy
+
+This will allow you to use TLS/SSL and configure headers needed for the integration. See the proxy-config folder for a basic example nginx/apache config.
+
+   apt install nginx
+   systemctl enable nginx   
+   # apply the config in /etc/nginx/sites-enabled/default 
+   systemctl start nginx
 
 ## Setting up Zimbra
 For this you need to set-up the Java server extension copy it from https://github.com/Zimbra-Community/zimbra-rocket/releases to /opt/zimbra/lib/ext/rocket/rocket.jar ( and make sure this is the only jar in this folder) then create a text file /opt/zimbra/lib/ext/rocket/config.properties with the contents:
