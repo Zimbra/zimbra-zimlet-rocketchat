@@ -45,7 +45,7 @@ Be careful, as you can easily lock yourself out if something does not work. If y
 Also enable the full iframe integration like so:
 ![Zimbra Rocket](https://raw.githubusercontent.com/Zimbra-Community/zimbra-rocket/master/img/zimbra-rocket-iframe2.png?1)
 
-You must also configure and deploy the Zimlet:
+# Configure and deploy the Zimlet:
       
 Get zimbra-zimlet-rocketchat.zip for Zimbra 9 (from Github releases) and as Zimbra user:
 
