@@ -51,10 +51,14 @@ Get zimbra-zimlet-rocketchat.zip for Zimbra 9 (from Github releases) and as Zimb
 
       zmzimletctl deploy zimbra-zimlet-rocketchat.zip
       
-To configure the rocketurl in the Zimlet
+To configure the rocketurl in the Zimlet add your url and create a config template:
 
-       zmzimletctl getConfigTemplate zimbra-zimlet-rocketchat.zip > /tmp/myconfig.xml
-      
-Edit /tmp/myconfig.xml and set `rocketurl`. Example: https://rocketchat.example.com (NO SLASH AT THE END). Import the new configuration file by the running following command:
+      echo '<zimletConfig name="zimbra-zimlet-rocketchat" version="0.0.1">
+          <global>
+              <property name="rocketurl">https://rocketchat.barrydegraaff.tk/</property>
+          </global>
+      </zimletConfig>' > /tmp/rocket_config_template.xml
+           
+Import the new configuration file by the running following command:
 
-      zmzimletctl configure /tmp/myconfig.xml
+      zmzimletctl configure /tmp/rocket_config_template.xml
