@@ -55,6 +55,6 @@ To configure the rocketurl in the Zimlet
 
        zmzimletctl getConfigTemplate zimbra-zimlet-rocketchat.zip > /tmp/myconfig.xml
       
-Edit /tmp/myconfig.xml and set `rocketurl`. Example: https://rocketchat.example.com/. Import the new configuration file by the running following command:
+Edit /tmp/myconfig.xml and set `rocketurl`. Example: https://rocketchat.example.com (NO SLASH AT THE END). Import the new configuration file by the running following command:
 
       zmzimletctl configure /tmp/myconfig.xml
