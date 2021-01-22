@@ -45,7 +45,7 @@ Be careful, as you can easily lock yourself out if something does not work. If y
 Also enable the full iframe integration like so:
 ![Zimbra Rocket](https://raw.githubusercontent.com/Zimbra-Community/zimbra-rocket/master/img/zimbra-rocket-iframe2.png?1)
 
-# Configure and deploy the Zimlet:
+## Configure and deploy the Zimlet:
       
 Get zimbra-zimlet-rocketchat.zip for Zimbra 9 (from Github releases) and as Zimbra user:
 
@@ -63,13 +63,13 @@ Import the new configuration file by the running following command:
 
       zmzimletctl configure /tmp/rocket_config_template.xml
 	  
-# Make you Zimbra Admin a Rocket Admin, creation of RocketChat Admins
+## Make you Zimbra Admin a Rocket Admin, creation of RocketChat Admins
 
 Once you have enabled iframe-authentication you will not be able to log-in directly using the RocketChat log-in page. In most cases you will not be able to log in to the RocketChat administrative account. To fix this you can promote a regular user account to have an admin role. Log on to Zimbra and go to the RocketChat tab of the account you wish to use as admin and verify the account name. Example admin@zimbra.example.com becomes admin.zimbra.example.com in RocketChat. Promote this user on RocketChat server like this:
 
       cd /snap/rocketchat-server/current
       ./bin/mongo parties --eval 'db.users.update({username:"admin.zimbra.example.com"}, {$set: {'roles' : [ "admin" ]}})'
 
-# Separation of tenants
+## Separation of tenants
 
 This Zimlet does not separate tenants from Zimbra, so all users on your Zimbra server that have access to the RocketChat Zimlet will have an account on RocketChat and will be able to see and chat with each other. Accounts on RocketChat are created if/when the user logs-in on Zimbra. To remove a user from RocketChat you have to remove them on RocketChat and de-activate them in Zimbra or disable the RocketChat Zimlet for the user you want to remove from RocketChat. 
