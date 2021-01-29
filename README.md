@@ -27,6 +27,12 @@ Modify the config in `/etc/nginx/sites-enabled/default` as per the example in pr
 
       systemctl start nginx
 
+## Choose your domain wisely
+
+During 2020 Google and various vendors have been pushing the requirement to set cookies with the SameSite and Secure attributes.
+
+RocketChat sets cookies on the client via Javascript and does not support configuring the SameSite attribute, which is needed for it to run on a different domain than Zimbra. This means that RocketChat needs to be installed on a subdomain similar to Zimbra. Aka zimbramail.example.com and rocketchat.example.com will work, zimbramail.example.io and rocketchat.example.com will not work.
+
 
 ## Setting up Zimbra
 For this you need to set-up the Java server extension copy it from https://github.com/Zimbra-Community/zimbra-rocket/releases to /opt/zimbra/lib/ext/rocket/rocket.jar ( and make sure this is the only jar in this folder) then create a text file /opt/zimbra/lib/ext/rocket/config.properties with the contents:
@@ -42,8 +48,6 @@ You must also configure Rocket chat like so:
 ![Zimbra Rocket](https://raw.githubusercontent.com/Zimbra-Community/zimbra-rocket/master/img/zimbra-rocket-iframe.png)
 Be careful, as you can easily lock yourself out if something does not work. If you want more details check: https://github.com/Zimbra-Community/zimbra-rocket/wiki/Debugging
 
-Also enable the full iframe integration like so:
-![Zimbra Rocket](https://raw.githubusercontent.com/Zimbra-Community/zimbra-rocket/master/img/zimbra-rocket-iframe2.png?1)
 
 ## Configure and deploy the Zimlet:
       
