@@ -24,7 +24,7 @@ all: zimbra-zimlet-pkg
 
 download:
 	mkdir downloads
-	wget -O downloads/rocket.jar https://github.com/Zimbra-Community/zimbra-rocket/releases/download/0.0.6/rocket.jar
+	wget -O downloads/rocket.jar https://files.zimbra.com/downloads/rocketchat/9.0.0.p13/rocket.jar
 	wget -O downloads/zimbra-zimlet-rocketchat.zip https://files.zimbra.com/downloads/rocketchat/9.0.0.p11/zimbra-zimlet-rocketchat.zip
 
 create-zip:
