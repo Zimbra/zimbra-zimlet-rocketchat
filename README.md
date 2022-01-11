@@ -3,6 +3,7 @@
 This Zimlet will automatically create accounts for your users and will log them on to Rocket Chat automatically. The Zimlet will create accounts in Rocket Chat based on the Zimbra primary email address. So user@example.com in Zimbra becomes user.example.com in Rocket Chat. Once set-up the users can only log-in via the Zimbra log-in page this includes mobile device apps. A welcome email is send to the user with a fallback password, this can only be used in situations where the integration is disabled.
 
 ![Zimbra Rocket UI](screenshots/RocketChat-Zimbra9-ui.png)
+![Zimbra Rocket sidebar](screenshots/screenshots/rocket-new.png)
 ![Zimbra Rocket welcome](screenshots/RocketChat-Zimbra9-welcome.png)
 
 ## How to install Rocket Chat
@@ -77,4 +78,8 @@ Once you have enabled iframe-authentication you will not be able to log-in direc
 
 ## Separation of tenants
 
-This Zimlet does not separate tenants from Zimbra, so all users on your Zimbra server that have access to the RocketChat Zimlet will have an account on RocketChat and will be able to see and chat with each other. Accounts on RocketChat are created if/when the user logs-in on Zimbra. To remove a user from RocketChat you have to remove them on RocketChat and de-activate them in Zimbra or disable the RocketChat Zimlet for the user you want to remove from RocketChat. 
+This Zimlet does not separate tenants from Zimbra, so all users on your Zimbra server that have access to the RocketChat Zimlet will have an account on RocketChat and will be able to see and chat with each other. Accounts on RocketChat are created if/when the user logs-in on Zimbra. To remove a user from RocketChat you have to remove them on RocketChat and de-activate them in Zimbra or disable the RocketChat Zimlet for the user you want to remove from RocketChat.
+
+## Set the default chat channel
+
+RocketChat will default show the welcome page when it loads, you can change it to show the default chat channel by setting `default` in Administration -> General -> First Channel After Login.

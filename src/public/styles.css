@@ -14,3 +14,11 @@ a[href$="/rocketchat"]:hover .zimbra-icon-rocketchat,
     min-width: 30px;
     background-size: 24px 24px;
  }
+
+.zimbra-client_right-side-zimlet-slot_wrapper {
+width:350px;
+}
+
+.zimbra-client_right-side-zimlet-slot_zimletPanel {
+max-width:350px !important;
+}

@@ -13,6 +13,7 @@ export default function Zimlet(context) {
 		// The zimlet slots to load into, and what is being loaded into that slot
 		// (CustomMenuItem and Router are both defined below)
 		plugins.register("slot::chatapps-tab-item", CustomTabItemInner);
+		plugins.register('slot::rightside-zimlet-slot', <App path={`/chatapps/rocketchat`} context={context}></App>);
 
 		// Only needed if you need to create a new url route, like for a menu tab, or print, etc
 		plugins.register("slot::routes", Router);
