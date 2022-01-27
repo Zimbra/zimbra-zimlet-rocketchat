@@ -1,6 +1,7 @@
 import { createElement } from "preact";
 import { withIntl } from "./enhancers";
 import App from "./components/app";
+import RightbarButton from "./components/rightbarbutton";
 import { MenuItem } from "@zimbra-client/components";
 
 import './public/styles.css';
@@ -12,8 +13,9 @@ export default function Zimlet(context) {
 	exports.init = function init() {
 		// The zimlet slots to load into, and what is being loaded into that slot
 		// (CustomMenuItem and Router are both defined below)
-		plugins.register("slot::chatapps-tab-item", CustomTabItemInner);
+		plugins.register('slot::chatapps-tab-item', CustomTabItemInner);
 		plugins.register('slot::rightside-zimlet-slot', <App path={`/chatapps/rocketchat`} context={context}></App>);
+		plugins.register('slot::rightbar-50px', RightbarButton);
 
 		// Only needed if you need to create a new url route, like for a menu tab, or print, etc
 		plugins.register("slot::routes", Router);
@@ -24,17 +26,17 @@ export default function Zimlet(context) {
 		return [<App path={`/chatapps/rocketchat`} context={context}></App>];
 	}
 
-		// Create a main nav menu item.
-		const CustomTabItemInner = () => {
-			const childIcon = (
-				<span class="zimbra-icon-rocketchat">
-				</span>);
-			return (
-				<MenuItem icon={childIcon} responsive href={`/chatapps/rocketchat`}>
-					Rocket Chat
-				</MenuItem>
-			);
-		};
+	// Create a main nav menu item.
+	const CustomTabItemInner = () => {
+		const childIcon = (
+			<span class="zimbra-icon-rocketchat">
+			</span>);
+		return (
+			<MenuItem icon={childIcon} responsive href={`/chatapps/rocketchat`}>
+				Rocket Chat
+			</MenuItem>
+		);
+	};
 
 
 	//create user account on rocket chat side
