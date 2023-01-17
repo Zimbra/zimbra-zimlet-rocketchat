@@ -1,5 +1,9 @@
 {
-	"zimbra-zimlet-rocketchat": {
-		"menuItem": ""
-	}
+   "zimbra-zimlet-rocketchat": {
+      "menuItem": ""
+   },
+  "zimlet": {
+    "description": "Rocket Chat integration in Zimbra",
+    "label": "Rocket Chat Zimlet"
+  }
 }
