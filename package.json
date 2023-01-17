@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "zimbra-zimlet-rocketchat",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "license": "BSD-3",
-  "description": "TBD",
+  "description": "Rocket Chat",
   "main": "build/index.js",
   "module": "src/index.js",
   "scripts": {
