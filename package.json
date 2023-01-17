@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "zimbra-zimlet-rocketchat",
-  "version": "0.0.2",
-  "license": "MIT",
-  "description": "Rocket Chat",
+  "version": "1.0.0",
+  "license": "BSD-3",
+  "description": "TBD",
   "main": "build/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -25,14 +25,7 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "@zimbra/zimlet-cli": "^8.0.0",
-    "audit-ci": "^2.5.1",
-    "eslint": "^6.8.0",
-    "prettier-eslint": "^9.0.1",
-    "eslint-config-synacor": "^3.0.5",
-    "eslint-plugin-preact-i18n": "^1.0.1",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2"
+    "@zimbra/zimlet-cli": "^14.3.0"
   },
   "dependencies": {}
 }
