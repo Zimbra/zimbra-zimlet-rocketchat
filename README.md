@@ -1,4 +1,4 @@
-# Rocket Chat integration for Zimbra 9
+# Rocket Chat integration for Zimbra 9, Zimbra 10
 
 This Zimlet will automatically create accounts for your users and will log them on to Rocket Chat automatically. The Zimlet will create accounts in Rocket Chat based on the Zimbra primary email address. So user@example.com in Zimbra becomes user.example.com in Rocket Chat. Once set-up the users can only log-in via the Zimbra log-in page this includes mobile device apps. A welcome email is send to the user with a fallback password, this can only be used in situations where the integration is disabled.
 
@@ -53,9 +53,12 @@ Be careful, as you can easily lock yourself out if something does not work. If y
 
 ## Configure and deploy the Zimlet:
       
-Get zimbra-zimlet-rocketchat.zip for Zimbra 9 (from Github releases) and as Zimbra user:
+Get zimbra-zimlet-rocketchat.zip for Zimbra 9, Zimbra 10 (from Github releases) and as Zimbra user:
 
-      zmzimletctl deploy zimbra-zimlet-rocketchat.zip
+```
+wget https://github.com/Zimbra/zimbra-zimlet-rocketchat/releases/download/0.0.6/zimbra-zimlet-rocketchat.zip -O /tmp/zimbra-zimlet-rocketchat.zip
+zmzimletctl deploy /tmp/zimbra-zimlet-rocketchat.zip
+```
       
 To configure the rocketurl in the Zimlet add your url and create a config template:
 
