@@ -1,4 +1,6 @@
-# Rocket Chat integration for Zimbra 9, Zimbra 10
+# Rocket Chat integration for Zimbra 9 / no longer works
+
+***RocketChat 6.x no longer offers a stand-alone non-cloud installation, this integration will no longer work due to bugs in the IFrame auth in Rocket Chat.***
 
 This Zimlet will automatically create accounts for your users and will log them on to Rocket Chat automatically. The Zimlet will create accounts in Rocket Chat based on the Zimbra primary email address. So user@example.com in Zimbra becomes user.example.com in Rocket Chat. Once set-up the users can only log-in via the Zimbra log-in page this includes mobile device apps. A welcome email is send to the user with a fallback password, this can only be used in situations where the integration is disabled.
 
